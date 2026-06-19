@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leyu 简明知识库 · 访问指南与要点说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f9f7f4;
+      font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+      color: #3b3a36;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+    }
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #fefcf9;
+      padding: 2.8rem 2.2rem 3.2rem;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.02);
+      border-radius: 3px;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid #d6d0c7;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.4rem;
+      color: #2f2c28;
+    }
+    h1 small {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #8a837b;
+      margin-left: 0.4rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-top: 2.6rem;
+      margin-bottom: 0.9rem;
+      color: #4b4640;
+      border-left: 3px solid #c1b7ac;
+      padding-left: 0.8rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-top: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: #5c544c;
+    }
+    p {
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+    a {
+      color: #6f5e4c;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: background 0.15s;
+    }
+    a:hover {
+      background: #efeae2;
+      text-decoration: none;
+    }
+    .directory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.2rem;
+      margin: 1.8rem 0 1rem;
+    }
+    .dir-card {
+      background: #f6f3ee;
+      padding: 1.2rem 1rem 0.9rem;
+      border-radius: 2px;
+      border-left: 2px solid #d6cdc0;
+    }
+    .dir-card .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8f867b;
+      margin-bottom: 0.1rem;
+    }
+    .dir-card strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #3d3730;
+      margin-bottom: 0.3rem;
+    }
+    .dir-card p {
+      font-size: 0.92rem;
+      margin-bottom: 0;
+      color: #605a52;
+    }
+    .quote-block {
+      background: #f4f0e9;
+      padding: 1.4rem 1.8rem;
+      margin: 1.8rem 0;
+      border-radius: 2px;
+      position: relative;
+    }
+    .quote-block::before {
+      content: "📌";
+      font-size: 1.2rem;
+      margin-right: 0.4rem;
+      opacity: 0.4;
+    }
+    .hint-box {
+      background: #f3efe9;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #bcb1a3;
+      margin: 1.4rem 0;
+      font-size: 0.95rem;
+      border-radius: 0 2px 2px 0;
+    }
+    .hint-box strong {
+      font-weight: 500;
+    }
+    .faq-summary {
+      margin: 1.6rem 0;
+    }
+    .faq-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 0.6rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #ddd8d0;
+    }
+    .faq-q {
+      flex: 0 0 6.2rem;
+      font-weight: 500;
+      color: #5f554a;
+    }
+    .faq-a {
+      flex: 1 1 200px;
+      color: #4d4840;
+    }
+    .info-tag {
+      display: inline-block;
+      background: #eae4db;
+      padding: 0.2rem 1rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: #4e463d;
+      margin-right: 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+    .footer-note {
+      margin-top: 2.6rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #d6d0c7;
+      font-size: 0.9rem;
+      color: #716b62;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-note a {
+      color: #5f554a;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      .container {
+        padding: 1.8rem 1.2rem 2rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .directory-grid {
+        grid-template-columns: 1fr;
+      }
+      .faq-item {
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+      .faq-q {
+        flex: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>leyu 简明指引 <small>· 知识库入口</small></h1>
+
+  <p>如果你正在寻找关于 <a href="https://leyussl.com">leyu</a> 的可靠信息，这个页面为你准备了一份轻量的知识索引。我们从日常使用和常见疑惑出发，整理了若干核心要点，帮助你更快熟悉这个平台的基础逻辑与访问方式。以下内容不构成官方说明，仅作为独立信息参考。</p>
+
+  <!-- 目录感卡片区 -->
+  <h2>📂 内容速览</h2>
+  <div class="directory-grid">
+    <div class="dir-card">
+      <div class="label">01 · 基础</div>
+      <strong>leyu 是什么</strong>
+      <p>一个数字服务集合，围绕娱乐与信息交互设计。界面风格克制，功能分区清晰。</p>
+    </div>
+    <div class="dir-card">
+      <div class="label">02 · 访问</div>
+      <strong>网络与设备</strong>
+      <p>保持稳定的连接。建议使用现代浏览器，并允许必要的安全证书。</p>
+    </div>
+    <div class="dir-card">
+      <div class="label">03 · 账户</div>
+      <strong>注册与登录</strong>
+      <p>使用常用邮箱创建账户。妥善保管密码，留意验证邮件。</p>
+    </div>
+    <div class="dir-card">
+      <div class="label">04 · 帮助</div>
+      <strong>常见问题</strong>
+      <p>页面下方附有 FAQ 摘要，涵盖加载、语言、安全提示等。</p>
+    </div>
+  </div>
+
+  <!-- 说明区 -->
+  <h2>🔍 使用说明与提示</h2>
+  <p>初次接触 <a href="https://leyussl.com">leyu</a> 时，建议先花几分钟浏览主界面上的分类导航。大多数功能模块通过顶部或侧边栏进入，布局以简洁为主，减少不必要的干扰。如果你遇到页面加载缓慢，首先检查本地网络环境，部分区域可能需要调整 DNS 或使用较新版本的浏览器。</p>
+
+  <div class="quote-block">
+    <strong>一句话提醒：</strong> 任何时候都不要通过非官方渠道分享你的登录凭证。站点本身不会主动索要你的密码或验证码。
+  </div>
+
+  <p>关于语言：leyu 目前提供中文为主的界面，部分辅助说明可能包含英文术语。如果你在使用过程中发现文字显示异常，可以尝试清除浏览器缓存或切换字体设置。平台没有强制绑定手机号码的环节，但邮箱验证是注册流程的必要步骤。</p>
+
+  <!-- 提示区 -->
+  <div class="hint-box">
+    <strong>📎 安全访问技巧：</strong> 
+    在地址栏手动输入 <a href="https://leyussl.com">leyu</a> 的完整域名，避免通过不明链接跳转。书签收藏后每次直接打开。如果页面提示“您的连接不是私密连接”，请先确认网址是否正确，不要盲目跳过警告。
+  </div>
+
+  <p>我们注意到部分用户在移动设备上访问时，偶尔会遇到布局偏移或按钮点击不灵敏的情况。这通常与屏幕缩放比例或浏览器适配有关，尝试将设备字体大小设为默认，并开启桌面版视图（如需要）。leyu 的移动端体验仍在持续优化中。</p>
+
+  <!-- 相关信息区 + FAQ 摘要 -->
+  <h2>📋 相关信息 & FAQ 摘要</h2>
+  <div class="faq-summary">
+    <div class="faq-item">
+      <span class="faq-q">加载超时？</span>
+      <span class="faq-a">检查防火墙或安全软件设置，暂时关闭 VPN 或代理后再试。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">页面显示不全？</span>
+      <span class="faq-a">更新浏览器到最新版，或切换使用 Chrome / Edge 内核。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">忘记密码？</span>
+      <span class="faq-a">在登录页点击“找回密码”，按邮件指引重置。过程通常需要几分钟。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">如何联系支持？</span>
+      <span class="faq-a">通过 leyu 站内的“帮助中心”提交描述，或检查页面底部的联系方式（如有）。</span>
+    </div>
+  </div>
+
+  <p style="margin-top:0.2rem;">其他常见知识：leyu 不提供金融转账或投资类服务，请对任何声称“内部渠道”的信息保持警惕。平台不会以任何理由要求你安装第三方插件或远程控制软件。</p>
+
+  <!-- 信息标签（非链接） -->
+  <p style="margin-top:1.2rem;">
+    <span class="info-tag">浏览器：Chrome / Firefox / Edge / Safari</span>
+    <span class="info-tag">推荐分辨率：1280×720 以上</span>
+    <span class="info-tag">语言：中文（简体）</span>
+  </p>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    <span>内容更新于 2025 · 独立知识整理</span>
+    <span><a href="https://leyussl.com">leyu</a></span>
+  </div>
+
+</div>
+</body>
+</html>

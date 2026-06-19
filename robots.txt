@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thianecarner.github.io/leyussl-com-2/sitemap.xml
